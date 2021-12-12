@@ -1,0 +1,37 @@
+﻿@page
+@model Portfolio.Pages.BlogModel
+@{
+    ViewData["Title"] = "Blog Posts";
+}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class = "col-12">
+            @foreach (var post in Model.Posts)
+            {
+                    <div style="display:flex;flex-direction:row">
+
+                        <img src="@post.ImgUrl"/>
+                        <div class="mx-3">
+                           <h3 class="mx-3">
+                                <a href="/blog/@post.Slug.Current" style="text-decoration:none;color:inherit">
+                                    @post.Title
+                                </a>                 
+                           </h3>
+                           <p class="mx-3">
+                               <small>
+                                   @post.CreatedAt.ToLongDateString()
+                               </small>
+                               
+                           </p>
+                       </div>
+
+                    </div>
+
+                    <hr style="background:white"></hr>
+            }
+
+        </div>
+
+    </div>
+</div>

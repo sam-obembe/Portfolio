@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Samuel.Obembe</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="shortcut icon" type="image/jpeg" href="~/favicon.png" />
+    <script src="https://kit.fontawesome.com/1072b3fc56.js" crossorigin="anonymous"></script>
+
+    <script src="public/js/site.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap"
+          rel="stylesheet">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body class="midnight">
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-expand navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/" style="font-family: 'Abel',sans-serif;">
+                    Samuel Obembe
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item custom-nav-item">
+                            <a class="nav-link" href="/Blog">
+                                Blog
+                            </a>
+                        </li>
+
+
+                       <li class="nav-item custom-nav-item mt-2">
+                            <span>
+                                <i class="fa fa-sun-o" aria-hidden="true" id="darkModeToggle"
+                                   style="cursor: pointer;"></i>
+                            </span>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+    <footer>
+
+        <div class="row mx-auto">
+            <div class="col-12" style="text-align: center;">
+                <a class="connect-icon-link mx-3" href="https://github.com/sam-obembe" target="_blank">
+                    <span class="connect-icons">
+                        <i class="devicon-github-original-wordmark"></i>
+
+                    </span>
+
+                </a>
+
+                <a class="connect-icon-link mx-3" href="https://www.linkedin.com/in/samuel-obembe/" target="_blank">
+                    <span class="connect-icons">
+                        <i class="devicon-linkedin-plain colored"></i>
+                    </span>
+                </a>
+
+                <a class="connect-icon-link mx-3" href="https://twitter.com/sam_obembe" target="_blank">
+                    <span class="connect-icons">
+                        <i class="devicon-twitter-original colored"></i>
+                    </span>
+                </a>
+
+                <!--
+                <a class="connect-icon-link mx-3" href="" target="_blank">
+                    <span class="connect-icons">
+                        <i class="devicon-wordpress-plain colored"></i>
+                    </span>
+                </a>
+                -->
+
+            </div>
+
+            <div class="col-12" style="text-align: center;">
+                <p style="font-family:'Abel',sans-serif; ;">
+                    <small>
+                        Made with <i class="fas fa-heart"></i>  using HTML, CSS, Javascript, Razor Pages and Sanity.io
+                    </small>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

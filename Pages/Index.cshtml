@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+<div class="container mt-3">
+
+    <div class="row mx-1">
+        <div class="col-md-8 about-me-section py-5">
+            <div class="jumbotron p-3 jumbotron-custom">
+                <h3>Hi I'm Samuel.</h3>
+                <p style="font-family: Roboto,monospace">
+                    I'm a fullstack software developer, in Dallas,TX. I've been a developer since 2018 and I primarily use C# and Javascript. In a previous life I was a Civil Engineer
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 py-5">
+            <div class="row">
+
+                @if (Model.Skills != null)
+                {
+                    foreach (var skill in Model.Skills)
+                    {
+                        <div class="col-md-4 col-3 language-icon-wrapper">
+                            <i class="@skill.IconClass language-icons mb-2"></i>
+                            <span style="font-family:Roboto,sans-serif">@skill.Name</span>
+                        </div>
+                    }
+                }
+            </div>
+
+        </div>
+    </div>
+
+</div>

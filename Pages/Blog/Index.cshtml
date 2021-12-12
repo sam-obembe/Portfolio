@@ -1,0 +1,32 @@
+﻿@page "{slug}"
+@model Portfolio.Pages.Blog.PostModel
+@{
+    ViewData["Title"] = "Post";
+}
+
+<div class="container mt-5">
+    <section class="row px-lg-5 px-3">
+        <div class="col-12" style="text-align:center">
+            <h1>
+                @Model.Post.Title
+            </h1>
+
+            <figure>
+                <img src="@Model.Post.ImgUrl" class="blog-image"/>
+                <figcaption class="blog-image-caption">image caption</figcaption>
+            </figure>
+
+            <hr style="background-color:white" />
+        </div>
+
+        <article class="col-12 blog-content" style="text-align:justify">
+            @Html.Raw(await Model.ContentToHtml(Model.Post.Body));
+        </article>
+
+    </section>
+
+
+
+
+
+</div>

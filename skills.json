@@ -1,0 +1,36 @@
+[
+  
+    {
+      "name": "javascript",
+      "iconClass": "devicon-javascript-plain"
+    },
+    {
+      "name": "C#",
+      "iconClass": "devicon-csharp-plain"
+    },
+    {
+      "name": "Typescript",
+      "iconClass": "devicon-typescript-plain"
+    },
+    {
+      "name": "React",
+      "iconClass": "devicon-react-original"
+    },
+    {
+      "name": "Node",
+      "iconClass": "devicon-nodejs-plain"
+    },
+    {
+      "name": "Express",
+      "iconClass": "devicon-express-original"
+    },
+    {
+      "name": "Dotnet",
+      "iconClass": "devicon-dotnetcore-plain"
+    },
+    {
+      "name": "Git",
+      "iconClass": "devicon-git-plain"
+    }
+  
+]

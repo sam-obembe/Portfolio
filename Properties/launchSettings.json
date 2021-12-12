@@ -1,0 +1,32 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:14526",
+      "sslPort": 44320
+    }
+  },
+  "profiles": {
+    "Portfolio": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SanityApiToken": "skOKbpT6qolJ5TOtXEpCbCOcLukaSuzUzzwj96n0fiAyTctDfHcxo6Qn2lYyCwzMgRXu9FSYoLJdyaWzvOmMiESD4A076Pq4oqz0oAEgX8hUDViZbdxjXRsDdrEGKUNlVxtdIDNc8BHiGK9sfXT7koqFxIcOiBumGh3MYiT2fiWa0D7SjGzi",
+        "SanityId": "cowx06db",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}
