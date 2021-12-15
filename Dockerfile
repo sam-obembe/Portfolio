@@ -1,22 +1,8 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/sdk/aspnet:6.0 AS base
-WORKDIR /app
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+COPY bin/Release/net6.0/publish/ App/
+WORKDIR /App
 EXPOSE 80
 EXPOSE 443
-
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
-WORKDIR /src
-COPY ["Portfolio.csproj", "."]
-RUN dotnet restore "./Portfolio.csproj"
-COPY . .
-WORKDIR "/src/."
-RUN dotnet build "Portfolio.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "Portfolio.csproj" -c Release -o /app/publish
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Portfolio.dll"]
+ENTRYPOINT ["dotnet","Portfolio.dll"]
