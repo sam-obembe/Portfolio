@@ -1,6 +1,6 @@
 **/.classpath
 **/.dockerignore
-
+**/.sln
 **/.git
 **/.gitignore
 **/.project
@@ -12,10 +12,6 @@
 **/*.dbmdl
 **/*.jfm
 **/azds.yaml
-**/Pages
-**/Portfolio
-**/Properties
-**/Utils
 **/charts
 **/docker-compose*
 **/Dockerfile*
