@@ -14,6 +14,8 @@ namespace Portfolio.Utils
         public Task<Post> GetPost(string slug);
 
         public Task<string> BuildHtml(IEnumerable<PostBody> postBody);
+
+        public Task<AboutMe> GetAboutMe();
     
     }
 }

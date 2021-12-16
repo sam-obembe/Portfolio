@@ -110,6 +110,21 @@ namespace Portfolio.Utils
             }
             
         }
-       
+
+        public async Task<AboutMe> GetAboutMe()
+        {
+            var bodyQuery = "*[_type == 'aboutMe']{intro,body}";
+            var requestUri = ApiUrl + bodyQuery;
+
+            var result = await GetClient().GetAsync(requestUri);
+
+            var resultString = await result.Content.ReadAsStringAsync();
+
+            var aboutMeResult = JsonSerializer.Deserialize<AboutMeResponse>(resultString);
+
+            var aboutMe = aboutMeResult.Result.FirstOrDefault();
+
+            return aboutMe;
+        }
     }
 }

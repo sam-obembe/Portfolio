@@ -18,6 +18,8 @@ namespace Portfolio.Pages
 
         public IEnumerable<Skill> Skills;
 
+        public AboutMe AboutMe;
+
         private ISanityClient SanityClient;
 
         public IndexModel(ILogger<IndexModel> logger, ISanityClient sanityClient)
@@ -31,18 +33,32 @@ namespace Portfolio.Pages
         {
 
            await GetSkills();
+            await GetAboutMe();
 
             return Page();
             
 
         }
 
-        private async Task<IEnumerable<Skill>> GetSkills()
+        private async Task GetSkills()
         {
             var skills = await SanityClient.GetSkills();
             Skills = skills;
 
-            return skills;
+            //return skills;
+        }
+
+        private async Task GetAboutMe()
+        {
+            var aboutMe = await SanityClient.GetAboutMe();
+            AboutMe = aboutMe;
+        }
+
+        public async Task<string> ContentToHtml(AboutMe aboutMe)
+        {
+            var html = await SanityClient.BuildHtml(aboutMe.Body);
+            return html;
         }
     }
+
 }
