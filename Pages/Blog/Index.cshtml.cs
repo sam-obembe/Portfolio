@@ -28,7 +28,7 @@ namespace Portfolio.Pages.Blog
         }
         public async Task<PageResult> OnGetAsync(string slug)
         {
-            Console.WriteLine(slug);
+            //Console.WriteLine(slug);
             await GetPost(slug);
             return Page();
         }

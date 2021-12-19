@@ -11,7 +11,7 @@
         <div class="col-md-8 about-me-section py-5">
             <div class="jumbotron p-3 jumbotron-custom">
                 <h3>@Model.AboutMe.Intro</h3>
-                <div style="font-family: Roboto,monospace">
+                <div className="about-me-content">
                     @Html.Raw(await Model.ContentToHtml(Model.AboutMe))
                 </div>
             </div>
@@ -31,6 +31,7 @@
                         </div>
                     }
                 }
+                
             </div>
 
         </div>

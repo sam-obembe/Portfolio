@@ -9,6 +9,9 @@ namespace Portfolio.Models
 
         [JsonPropertyName("_type")]
         public string Type { get; set; }
+
+        [JsonPropertyName("href")]
+        public string Href { get; set; }
     }
 
 

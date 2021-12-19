@@ -13,14 +13,14 @@
 
             <figure>
                 <img src="@Model.Post.ImgUrl" class="blog-image" />
-                <figcaption class="blog-image-caption">image caption</figcaption>
+                <!-- <figcaption class="blog-image-caption">image caption</figcaption>-->
             </figure>
 
             <hr style="background-color:white" />
         </div>
 
         <article class="col-12 blog-content" style="text-align:justify">
-            @Html.Raw(await Model.ContentToHtml(Model.Post.Body));
+            @Html.Raw(await Model.ContentToHtml(Model.Post.Body))
         </article>
 
     </section>

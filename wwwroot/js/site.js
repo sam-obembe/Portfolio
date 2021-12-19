@@ -66,5 +66,5 @@ function setThemeFromLocalStorage() {
     else if (themePreference === "dark") {
         setTheme("dark");
     }
-    console.log(window.localStorage);
+    //console.log(window.localStorage);
 }
