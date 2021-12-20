@@ -10,6 +10,9 @@ namespace Portfolio.Models
 
         [JsonPropertyName("asset")]
         public Asset Asset { get; set; }
+
+        [JsonPropertyName("caption")]
+        public string Caption { get; set; }
     }
 
 
